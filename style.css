@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #65b2fb;
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin: 20em auto 0 auto;
+}
+
+.cake-container {
+    height: 100%;
+}
+
+.gambar-bg {
+    position: absolute;
+}
+
+.gambar-bg:nth-child(2) {
+    width: 150px;
+    top: 660px;
+    right: 120px;
+}
+
+/* .gambar-bg:nth-child(3) {
+    bottom: -120px;
+    left: -100px;
+    opacity: 80%;
+}
+.gambar-bg:nth-child(4) {
+    bottom: -120px;
+    right: -100px;
+    opacity: 80%;
+} */
+.gambar-bg:nth-child(3) {
+    width: 200px;
+}
+.gambar-bg:nth-child(4) {
+    width: 200px;
+    top: 120px;
+    left: -80px;
+}
+.gambar-bg:nth-child(5) {
+    width: 200px;
+    top: 150px;
+    left: 120px;
+}
+.gambar-bg:nth-child(6) {
+    width: 200px;
+    top: 270px;
+}
+.gambar-bg:nth-child(7) {
+    width: 150px;
+    top: 660px;
+    left: 120px;
+}
+.gambar-bg:nth-child(8) {
+    width: 150px;
+    right: 0px;
+}
+.gambar-bg:nth-child(9) {
+    width: 150px;
+        right: 80px;
+    top: 60px;
+}
+.gambar-bg:nth-child(10) {
+    width: 150px;
+    right: 0px;
+    top: 150px;
+}
+.gambar-bg:nth-child(11) {
+    width: 200px;
+    right: 0px;
+    bottom: 0px;
+}
+.gambar-bg:nth-child(12) {
+    width: 200px;
+    right: -80px;
+    bottom: 140px;
+}
+.gambar-bg:nth-child(13) {
+    width: 200px;
+    right: 120px;
+    bottom: 130px;
+}
+.gambar-bg:nth-child(14) {
+    width: 200px;
+    right: 0px;
+    bottom: 280px;
+}
+.gambar-bg:nth-child(15) {
+    width: 150px;
+    left: 0px;
+    bottom: 0px;
+}
+.gambar-bg:nth-child(16) {
+    width: 150px;
+    left: 80px;
+    bottom: 80px;
+}
+.gambar-bg:nth-child(17) {
+    width: 150px;
+    left: 0px;
+    bottom: 150px;
+}
+
+@keyframes candle-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.candles-container {
+  position: absolute;
+  top: 700px;
+  left: 50%;
+  width: 140px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%, 0);
+  opacity: 1;
+  will-change: transform;
+}
+
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  width: 5px;
+  height: 35px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+  opacity: 1;
+  transition: opacity 0.5s;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.fuego:nth-child(1) {
+  animation: fuego 2s 1.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  animation: fuego 1.5s 1.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  animation: fuego 1s 1.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  animation: fuego 0.5s 1.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  animation: fuego 0.2s 1.5s infinite;
+}
+
+@keyframes fuego {
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+.text {
+  color: whitesmoke;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 2em;
+}
+
+.instructions {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.6em;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  opacity: 0;
+  top: -10px;
+  animation: confetti-fall 3s linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.blow-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: transparent;
+}
